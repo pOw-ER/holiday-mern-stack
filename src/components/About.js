@@ -1,10 +1,15 @@
 import React from 'react';
+import Header from './Header';
 
 
 const About = () => {
   return (
     <div>
-      <h1>About page</h1>
+      <Header />
+      <section>
+        <h1>About page</h1>
+      </section>
+
     </div>
   );
 }

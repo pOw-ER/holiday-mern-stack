@@ -1,25 +1,49 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from './Header'
-const Home = () => {
+// import axios from 'axios'
+import appContext from '../contexts/appContext'
+
+const Home = (props) => {
+  const { location, setLocation, activity, setActivity, results, setResults } = useContext(appContext)
+  // const [location, setLocation] = useState('')
+  // const [activity, setActivity] = useState('')
+  // const [results, setResults] = useState([])
+  // props.handleSubmit = (event) => {
+  //   event.preventDefault();
+
+  //   axios.post("http://localhost:5000/search", { location, activity })
+  //     // .then(response => response.json())
+  //     .then(items => {
+  //       // console.log(items.data);
+  //       props.setResults(items.data)
+  //     })
+
+  //   window.location = '/destination'
+  // }
   return (
     <div>
       <Header />
+      {results.map(result => {
+        return <li key={result._id}>{result.location}</li>
+      })}
       <section id="hero">
         <h1>Explore and</h1>
         <h1>Travel</h1>
         <p>Holiday Finder</p>
-        <form action="/find/holiday">
-          <select id="countries" name="countries">
-            <option value="location">Location</option>
-            <option value="germany">Germany</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="russia">Russia</option>
+        <form onSubmit={(event) => props.handleSubmit(event)}>
+          <select id="countries" name="countries" onChange={(e) => setLocation(e.target.value)}>
+            <option value="">Location</option>
+            <option value="Germany">Germany</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Russia">Russia</option>
+            <option value="Netherland">Netherland</option>
           </select>
-          <select id="activities" name="activities">
-            <option value="activities">Activity</option>
-            <option value="germany">Germany</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="russia">Russia</option>
+          <select id="activities" name="activities" onChange={(e) => setActivity(e.target.value)}>
+            <option value="">Activity</option>
+            <option value="Eating">Eating</option>
+            <option value="Drinking">Drinking</option>
+            <option value="Smoking">Smoking</option>
+            <option value="Yoga">Yoga</option>
           </select><br />
           <input type="submit" value="Explore" />
         </form>
@@ -72,11 +96,11 @@ trip, but now, they can also let Lonely Planet Experiences lead the way</p>
           </div>
         </section>
         <section id="social-media">
-          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.twitter.com" target="_blank" rel="noreferrer"><i className="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><i className="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer"><i className="fab fa-youtube"></i></a>
         </section>
       </footer>
     </div>
