@@ -4,4 +4,135 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #000;
+  list-style: none;
+}
+header {
+  padding: 10px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* justify-content: space-between; */
+}
+header nav a {
+  padding: 10px 0 10px 10px;
+  color: #b8becd;
+}
+.white-orange-button {
+  padding: 7px 30px;
+  border: 1px solid #fb8f1d;
+  border-radius: 5px;
+  color: #fb8f1d;
+}
+.orange-white-button {
+  padding: 7px 25px;
+  border: 1px solid #fb8f1d;
+  border-radius: 5px;
+  background-color: #fb8f1d;
+  color: #fff;
+}
+header li {
+  margin-left: 10px;
+}
+
+#hero {
+  padding: 75px 8%;
+  background: center/cover no-repeat;
+}
+#hero h1 {
+  font-size: 3rem;
+}
+#hero h1:nth-of-type(2) {
+  margin-bottom: 50px;
+}
+/* .line {
+  width: 500px;
+  border-top: 2px solid #000;
+} */
+
+#countries,
+#activities {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+
+main {
+  padding: 75px 8%;
+}
+main #homepage-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 100px;
+}
+main #homepage-section img {
+  width: 100%;
+}
+main #homepage-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main #homepage-section div h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+main #homepage-section div p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+main #homepage-section div a {
+  display: inline;
+}
+footer {
+  padding: 75px 8% 0;
+  background-color: #ccc;
+}
+#footer-nav {
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+  border-bottom: 1px solid #888;
+}
+#footer-nav div:nth-of-type(1) div {
+  padding-bottom: 20px;
+}
+#footer-nav div:nth-of-type(1) p:nth-of-type(1) {
+  padding-bottom: 40px;
+}
+#footer-nav h4,
+#footer-nav div p {
+  padding-bottom: 20px;
+}
+#social-media {
+  padding: 15px 8%;
+  text-align: center;
+}
+#social-media a {
+  font-size: 1.5rem;
+  padding: 5px 20px;
+}
+@media (max-width: 900px) {
+  #footer-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+  #footer-nav > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
