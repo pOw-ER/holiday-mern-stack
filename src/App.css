@@ -9,6 +9,13 @@
 .ml {
   margin-left: 10px;
 }
+.fa-bars {
+  opacity: 0;
+  display: none;
+  color: #fb8f1d;
+  font-size: 1.6rem;
+}
+
 header {
   padding: 10px 8%;
   display: flex;
@@ -19,7 +26,6 @@ header nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-  /* justify-content: space-between; */
 }
 header nav a {
   padding: 10px 0 10px 10px;
@@ -44,7 +50,6 @@ header li {
 
 #hero {
   padding: 75px 8%;
-  background: center/cover no-repeat;
 }
 #hero h1 {
   font-size: 3rem;
@@ -156,5 +161,67 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  #hero {
+    background-position: center !important;
+    background-size: contain !important;
+  }
+}
+@media (max-width: 769px) {
+  .fa-bars {
+    opacity: 1;
+    display: inline-block;
+    cursor: pointer;
+    /* transition: all 0.7s; */
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    height: 500px;
+    background-color: #16805c;
+    transition: all 0.7s;
+  }
+  .menu-change {
+    display: block !important;
+    opacity: 1 !important;
+    /* transition: all 0.7s !important; */
+  }
+  header nav ul {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header nav ul li {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header nav ul li a {
+    font-size: 2rem;
+    color: #ffffff40;
+    transition: all 0.5s;
+  }
+  header nav ul li a:hover {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  .white-orange-button {
+    border: 1px solid #fb8f1d;
+    color: #fb8f1d;
+  }
+  .orange-white-button {
+    border: 1px solid #fb8f1d;
+    background-color: #fb8f1d;
+    color: #fff;
+  }
+  .fa-times {
+    color: #fb8f1d;
+    font-size: 2rem;
+    cursor: pointer;
+    /* transition: all 0.7s; */
   }
 }

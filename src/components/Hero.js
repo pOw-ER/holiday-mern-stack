@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = (props) => {
   return (
-    <section id="hero">
+    <section id="hero" style={{ background: `url('${process.env.PUBLIC_URL}/img/hero_holiday.png') right no-repeat` }}>
       <h1>Explore and</h1>
       <h1>Travel</h1>
       <p><b>Holiday Finder</b></p>
