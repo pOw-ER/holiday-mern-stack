@@ -1,12 +1,11 @@
 import React from 'react';
 
-
 const Hero = (props) => {
   return (
     <section id="hero">
       <h1>Explore and</h1>
       <h1>Travel</h1>
-      <p>Holiday Finder</p>
+      <p><b>Holiday Finder</b></p>
       <span className="line"></span>
       <form onSubmit={(event) => props.handleSubmit(event)}>
         <select id="countries" name="countries" onChange={(event) => props.setLocation(event.target.value)}>
@@ -24,6 +23,7 @@ const Hero = (props) => {
           <option value="Yoga">Yoga</option>
         </select><br />
         <input type="submit" value="Explore" className="orange-white-button" />
+        <input type="submit" value="View All" className="orange-white-button ml" />
       </form>
     </section>
   );

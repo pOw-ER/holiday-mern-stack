@@ -1,13 +1,9 @@
-
 import Footer from './Footer'
 import Header from './Header'
 import Hero from './Hero'
-import HomeSection from './HomeSection'
 import Product from './Product'
 
-
-const Home = (props) => {
-
+const Partner = (props) => {
   return (
     <div>
       <Header />
@@ -29,12 +25,10 @@ const Home = (props) => {
           img={result.image_url}
         />
       })}
-      <main>
-        <HomeSection />
-      </main>
+
       <Footer />
     </div>
   );
 }
 
-export default Home;
+export default Partner;

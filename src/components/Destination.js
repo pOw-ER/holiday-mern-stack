@@ -1,25 +1,12 @@
-// import React, { useContext } from 'react';
+
 import Footer from './Footer';
 import Header from './Header';
 import Hero from './Hero';
-// import axios from 'axios'
+import Product from './Product';
+
 
 const Destination = (props) => {
-  // const [location, setLocation] = useState('')
-  // const [activity, setActivity] = useState('')
-  // const [results, setResults] = useState([])
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
 
-  //   axios.post("http://localhost:5000/search", { props.location, props.activity })
-  //     // .then(response => response.json())
-  //     .then(items => {
-  //       // console.log(items.data);
-  //       props.setResults(items.data)
-  //     })
-
-  //   // window.location = '/destination'
-  // }
   return (
     <div>
       <Header />
@@ -36,11 +23,13 @@ const Destination = (props) => {
         {props.results &&
           props.results.map(result => {
             return (
-              <div key={result._id}>
-                <li>{result.location}</li>
-                <li>{result.activity}</li>
-              </div>
-
+              <Product
+                key={result._id}
+                location={result.location}
+                activity={result.activity}
+                description={result.description}
+                img={result.image_url}
+              />
             )
           })}
       </section>

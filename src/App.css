@@ -6,6 +6,9 @@
   color: #000;
   list-style: none;
 }
+.ml {
+  margin-left: 10px;
+}
 header {
   padding: 10px 8%;
   display: flex;
@@ -49,10 +52,11 @@ header li {
 #hero h1:nth-of-type(2) {
   margin-bottom: 50px;
 }
-/* .line {
-  width: 500px;
+.line {
+  display: inline-block;
+  width: 25px;
   border-top: 2px solid #000;
-} */
+}
 
 #countries,
 #activities {
@@ -124,6 +128,24 @@ footer {
 #social-media a {
   font-size: 1.5rem;
   padding: 5px 20px;
+}
+
+.products {
+  padding: 75px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.products img {
+  width: 50%;
+}
+.products div {
+  width: 50%;
+  padding-left: 50px;
+}
+.products div p {
+  margin-bottom: 40px;
 }
 @media (max-width: 900px) {
   #footer-nav {
