@@ -19,6 +19,7 @@ const Partner = (props) => {
       {props.results.map(result => {
         return <Product
           key={result._id}
+          id={result._id}
           location={result.location}
           activity={result.activity}
           description={result.description}

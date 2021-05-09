@@ -6,6 +6,7 @@ import Destination from './components/Destination'
 import Home from './components/Home'
 import axios from 'axios'
 import Partner from './components/Partner';
+import HolidayDetails from './components/HolidayDetails';
 
 function App() {
   const [location, setLocation] = useState('')
@@ -21,10 +22,10 @@ function App() {
           // console.log(items.data);
           setResults(items.data)
           // window.location = '/destination'
+          // event.preventDefault();
         })
         .catch(err => console.log(err))
     } else {
-      event.preventDefault();
       fetch('http://localhost:5000/')
         .then(response => response.json())
         .then(datas => {
@@ -32,9 +33,8 @@ function App() {
         })
         .catch(err => console.log(err))
     }
-
-
   }
+
   return (
     <div className="App">
       <Switch>
@@ -72,6 +72,7 @@ function App() {
             setResults={setResults}
           />
         </Route>
+        <Route path="/book/:id" render={(props) => <HolidayDetails {...props} />} />
       </Switch>
     </div>
   );

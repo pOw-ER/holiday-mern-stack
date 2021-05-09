@@ -152,6 +152,15 @@ footer {
 .products div p {
   margin-bottom: 40px;
 }
+
+#details-page img {
+  width: 100%;
+}
+#details-page div,
+#details-page h2 {
+  text-align: center;
+  margin: 20px;
+}
 @media (max-width: 900px) {
   #footer-nav {
     grid-template-columns: 1fr 1fr;
@@ -167,6 +176,7 @@ footer {
     background-size: contain !important;
   }
 }
+
 @media (max-width: 769px) {
   .fa-bars {
     opacity: 1;

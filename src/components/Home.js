@@ -5,9 +5,7 @@ import Hero from './Hero'
 import HomeSection from './HomeSection'
 import Product from './Product'
 
-
 const Home = (props) => {
-
   return (
     <div>
       <Header />
@@ -23,6 +21,7 @@ const Home = (props) => {
       {props.results.map(result => {
         return <Product
           key={result._id}
+          id={result._id}
           location={result.location}
           activity={result.activity}
           description={result.description}

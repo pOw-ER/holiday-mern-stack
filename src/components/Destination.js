@@ -24,6 +24,7 @@ const Destination = (props) => {
           props.results.map(result => {
             return (
               <Product
+                id={result._id}
                 key={result._id}
                 location={result.location}
                 activity={result.activity}
